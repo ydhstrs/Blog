@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-gold: 227 205 102;
+    /* ... */
+  }
+}
+ /* .h-278 {
+    height: 600px;
+  } */
+  .backdrop-blur-md {
+    backdrop-filter: blur(80px); /* Ubah nilai blur sesuai keinginan Anda */
+}
+/* Animasi untuk menyembunyikan modal */
