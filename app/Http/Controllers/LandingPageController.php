@@ -26,11 +26,11 @@ class LandingPageController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-          'email' => 'max:255|unique:email_submits',
+          'email' => 'max:255',
           'name' => 'max:255',
         ]);
         EmailSubmit::create($validatedData);
 
-        return redirect('/')->with('success', 'Content Telah Ditambahkan');
+        return redirect('/')->with('success', '');
     }
 }

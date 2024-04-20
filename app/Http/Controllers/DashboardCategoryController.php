@@ -31,7 +31,7 @@ class DashboardCategoryController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-          'name' => 'max:255',
+            'name' => 'max:255',
         ]);
         Category::create($validatedData);
 
@@ -61,7 +61,7 @@ class DashboardCategoryController extends Controller
     public function update(Request $request, Category $category)
     {
         $validatedData = $request->validate([
-        'name' => 'max:255'
+            'name' => 'max:255',
         ]);
 
         Category::where('id', $category->id)->update($validatedData);
@@ -77,23 +77,21 @@ class DashboardCategoryController extends Controller
         $category->delete();
     }
 
-    public function uploadImage(Request $request)
+    public function addToVerif(Request $request, $id)
     {
-        if ($request->hasFile('upload')) {
-            $originName = $request->file('upload')->getClientOriginalName();
-            $fileName = pathinfo($originName, PATHINFO_FILENAME);
-            $extension = $request->file('upload')->getClientOriginalExtension();
-            $fileName = $fileName.'_'.time().'.'.$extension;
+        Category::where('id', $request['id'])->update([
+            'is_show' => 1,
+        ]);
 
-            $request->file('upload')->move(public_path('images'), $fileName);
+        return redirect('/dashboard/category')->with('success', 'Category Has Been Edited');
+    }
 
-            $CKEditorFuncNum = $request->input('CKEditorFuncNum');
-            $url = asset('images/'.$fileName);
-            $msg = 'Image uploaded successfully';
-            $response = "<script>window.parent.CKEDITOR.tools.callFunction($CKEditorFuncNum, '$url', '$msg')</script>";
+    public function delToVerif(Request $request, $id)
+    {
+        Category::where('id', $request['id'])->update([
+           'is_show' => 0,
+        ]);
 
-            @header('Content-type: text/html; charset=utf-8');
-            echo $response;
-        }
+        return redirect('/dashboard/category')->with('success', 'Category Has Been Edited');
     }
 }

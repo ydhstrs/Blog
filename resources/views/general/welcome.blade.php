@@ -42,7 +42,8 @@
                                 </button>
                             </div>
                             <!-- Body Modal -->
-                            <form class="p-4 md:p-5">
+                            <form class="p-4 md:p-5"  method="post" action="/" >
+                                @csrf
                                 <div class="grid gap-4 mb-4">
                                     <div>
                                         <label for="name"
@@ -136,8 +137,8 @@
     </section>
 <section id="sections2" class="my-8 bg-gray-100">
     <h5 class="text-center text-black font-bold text-2xl py-10 font-montserrat">{{ $section2->title_head }}</h5>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-0 p-20">
-        <div class="col-span-1 grid grid-cols-4 gap-1 border-4 border-gray-700 p-4">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-0 p-20">
+        <div class="col-span-1 grid grid-cols-4 gap-1 border-2 border-gray-500 p-4">
             <div class="col-span-1">
                 <svg class="w-[90px] h-[90px] text-gray-800 bg-amber-400 rounded-full p-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" d="M11 16v-5.5A3.5 3.5 0 0 0 7.5 7m3.5 9H4v-5.5A3.5 3.5 0 0 1 7.5 7m3.5 9v4M7.5 7H14m0 0V4h2.5M14 7v3m-3.5 6H20v-6a3 3 0 0 0-3-3m-2 9v4m-8-6.5h1" />
@@ -148,7 +149,7 @@
                 <p class="text-left font-light text-black font-montserrat">{{ $section2->desc1 }}</p>
             </div>
         </div>
-        <div class="col-span-1 grid grid-cols-4 gap-1 border-t-4 border-b-4 border-r-4 border-gray-700 p-4">
+        <div class="col-span-1 grid grid-cols-4 gap-1 lg:border-l-0 md:border-l-2 lg:border-t-2 lg:border-b-2 border-r-2 border-gray-500 p-4">
             <div class="col-span-1">
                 <svg class="w-[90px] h-[90px] text-gray-800  bg-amber-400 rounded-full p-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" d="m11.5 11.5 2.071 1.994M4 10h5m11 0h-1.5M12 7V4M7 7V4m10 3V4m-7 13H8v-2l5.227-5.292a1.46 1.46 0 0 1 2.065 2.065L10 17Zm-5 3h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
@@ -159,7 +160,7 @@
                 <p class="text-left font-light text-black font-montserrat">{{ $section2->desc2 }}</p>
             </div>
         </div>
-        <div class="col-span-1 grid grid-cols-4 lg:gap-1 border-t-4 border-b-4 border-r-4 border-gray-700 p-4 sm:gap-4">
+        <div class="col-span-1 grid grid-cols-4 lg:gap-1 lg:border-l-0 md:border-l-2  border-t-2 border-b-2 border-r-2 border-gray-500 p-4 sm:gap-4">
             <div class="col-span-1">
                 <svg class="w-[90px] h-[90px] text-gray-800 bg-amber-400 rounded-full p-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" d="M4 4v15a1 1 0 0 0 1 1h15M8 16l2.5-5.5 3 3L17.273 7 20 9.667" />

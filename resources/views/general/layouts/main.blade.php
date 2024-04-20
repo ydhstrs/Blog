@@ -47,7 +47,9 @@
         #crud-modal[aria-hidden="true"] {
             animation: modal-fade-out 0.3s ease forwards;
         }
+        
     </style>
+
 </head>
 
 <body>
@@ -57,8 +59,8 @@
             <div class="flex items-center justify-between relative">
                 <div class="mb-2 sm:mb-0 flex flex-row
   ">
-                    <div class="h-28 self-center mx-4">
-                        <img class="h-28 self-center" src="/logo.png" />
+                    <div class="h-24 self-center mx-4">
+                        <img class="h-24 self-center" src="/logo.png" />
                     </div>
                     <div>
                         {{-- <a href="/home" class="text-xl no-underline text-green-900 font-semibold">My Blog</a><br>
@@ -96,7 +98,7 @@
             </div>
         </div>
     </header>
-    <div class="pt-32">
+    <div class="pt-24">
         @yield('contents')
     </div>
 

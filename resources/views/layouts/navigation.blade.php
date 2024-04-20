@@ -34,7 +34,7 @@
                     <x-nav-link :href="'/dashboard/contact'">
                         {{ __('Contact') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('')">
+                    <x-nav-link :href="'/dashboard/ebook'" >
                         {{ __('Ebook PDF') }}
                     </x-nav-link>
                 </div>
