@@ -12,13 +12,14 @@ return new class() extends Migration {
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
-            $table->string('tiktok');
-            $table->string('linkedin');
-            $table->string('instagram');
-            $table->string('email');
-            $table->string('twitter');
-            $table->string('disocrd');
-            $table->string('youtube');
+            $table->string('email')->nullable();
+            $table->string('tiktok')->nullable();
+            $table->string('linkedin')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('discord')->nullable();
+            $table->string('telegram')->nullable();
+            $table->string('youtube')->nullable();
             $table->timestamps();
         });
     }

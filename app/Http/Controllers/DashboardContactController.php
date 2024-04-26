@@ -31,13 +31,14 @@ class DashboardContactController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'email' => 'required|max:255',
-            'tiktok' => 'required|max:255',
-            'linkedin' => 'required|max:255',
-            'instagram' => 'required|max:255',
-            'discord' => 'required|max:255',
-            'twitter' => 'required|max:255',
-            'youtube' => 'required|max:255',
+            'email' => 'max:255',
+            'tiktok' => 'max:255',
+            'linkedin' => 'max:255',
+            'instagram' => 'max:255',
+            'discord' => 'max:255',
+            'twitter' => 'max:255',
+            'telegram' => 'max:255',
+            'youtube' => 'max:255',
         ]);
 
         Contact::create($validatedData);
@@ -55,8 +56,11 @@ class DashboardContactController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Contact $contact)
     {
+        return view('admin.contact.edit', [
+            'item' => $contact,
+        ]);
     }
 
     /**
@@ -65,13 +69,14 @@ class DashboardContactController extends Controller
     public function update(Request $request, Contact $contact)
     {
         $validatedData = $request->validate([
-            'email' => 'required|max:255',
-            'tiktok' => 'required|max:255',
-            'linkedin' => 'required|max:255',
-            'instagram' => 'required|max:255',
-            'discord' => 'required|max:255',
-            'twitter' => 'required|max:255',
-            'youtube' => 'required|max:255',
+            'email' => 'max:255',
+            'tiktok' => 'max:255',
+            'linkedin' => 'max:255',
+            'instagram' => 'max:255',
+            'discord' => 'max:255',
+            'twitter' => 'max:255',
+            'telegram' => 'max:255',
+            'youtube' => 'max:255',
         ]);
 
         Contact::where('id', $contact->id)->update($validatedData);

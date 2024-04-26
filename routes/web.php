@@ -23,6 +23,8 @@ Route::get('/', [LandingPageController::class, 'index'])->name('landingpage');
 Route::get('/blog', [PostController::class, 'index'])->name('post');
 Route::get('/download-panduan-airdop', [EbookController::class, 'index'])->name('ebook');
 Route::post('/', [LandingPageController::class, 'store'])->name('email');
+Route::get('/article/{post:slug}', [PostController::class, 'show']);
+Route::get('/blog/category/{category}', [PostController::class, 'showCategory']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

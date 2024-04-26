@@ -32,4 +32,9 @@ class Post extends Model
     {
         return $this->belongsTo(Label::class, 'label_id2');
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Contact;
 use App\Models\EmailSubmit;
 use App\Models\LandingPageContent;
 use App\Models\Partner;
@@ -20,6 +21,7 @@ class LandingPageController extends Controller
             'section4' => Partner::get(),
             'sectionblog' => Post::latest()->take(3)->get(),
             'sectioncategory' => Category::where('is_show', 1)->get(),
+            'contact' => Contact::get()->first(),
         ]);
     }
 

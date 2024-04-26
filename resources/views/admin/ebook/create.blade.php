@@ -10,7 +10,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    <div class="rounded-t mb-0 px-4 py-3 border-0">
+                    {{-- <div class="rounded-t mb-0 px-4 py-3 border-0">
                         <div class="flex flex-wrap items-center">
                             <div class="relative w-full px-4 max-w-full flex-grow flex-1">
                                 <h3 class="font-semibold text-lg text-blueGray-700">
@@ -18,7 +18,7 @@
                                 </h3>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="block w-full overflow-x-auto p-8">
                         <form method="post" action="/dashboard/ebook" enctype="multipart/form-data">

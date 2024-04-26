@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use App\Models\Ebook;
 use Illuminate\Http\Request;
 
@@ -11,8 +12,7 @@ class EbookController extends Controller
     {
         return view('general.ebook', [
             'ebook' => Ebook::get()->first(),
+            'contact' => Contact::get()->first(),
         ]);
     }
-
-
 }

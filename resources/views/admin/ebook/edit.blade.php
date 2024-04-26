@@ -35,14 +35,14 @@
 
                             <div class="mb-6">
                                 @if ($ebook->image)
-                                    <img src="{{ asset('/storage/' . $ebook->image) }}" class="img-preview w-56">
+                                    <img src="{{ asset('/' . $ebook->image) }}" class="img-preview w-56">
                                 @else
                                     <img class="img-preview w-56">
                                 @endif
                                 <label class="block mb-2 text-sm font-medium text-gray-900" for="file_input">Upload
                                     file</label>
                                 <input type="hidden" name="oldImage" value="{{ $ebook->image }}">
-                                <input
+                                <input required
                                     class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:placeholder-gray-400 @error('image') border-red-600 @enderror"
                                     aria-describedby="file_input_help" id="image" name="image" type="file"
                                     onchange="previewImage()">
@@ -59,7 +59,7 @@
                                 <img class="img-preview w-56">
                                 <label class="block mb-2 text-sm font-medium text-gray-900" for="file_input">Upload
                                     Pdf </label>
-                                <input
+                                <input required
                                     class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer "
                                     aria-describedby="file_input_help" id="pdf" name="pdf" type="file">
                                 <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">SVG, PNG,
