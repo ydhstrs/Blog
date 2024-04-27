@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                         <img class="h-10 self-center" src="/logo.png" />
                     </a>
                 </div>
 
@@ -34,8 +34,11 @@
                     <x-nav-link :href="'/dashboard/contact'">
                         {{ __('Contact') }}
                     </x-nav-link>
-                    <x-nav-link :href="'/dashboard/ebook'" >
+                    <x-nav-link :href="'/dashboard/ebook'">
                         {{ __('Ebook PDF') }}
+                    </x-nav-link>
+                    <x-nav-link :href="'/dashboard/emailsub'">
+                        {{ __('Email Submitted') }}
                     </x-nav-link>
                 </div>
             </div>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardCategoryController;
 use App\Http\Controllers\DashboardContactController;
 use App\Http\Controllers\DashboardEbookController;
+use App\Http\Controllers\DashboardEmailSubmitController;
 use App\Http\Controllers\DashboardLabelController;
 use App\Http\Controllers\DashboardLandingPageController;
 use App\Http\Controllers\DashboardPartnerController;
@@ -37,6 +38,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/dashboard/label', DashboardLabelController::class);
     Route::resource('/dashboard/ebook', DashboardEbookController::class);
     Route::resource('/dashboard/partner', DashboardPartnerController::class);
+    Route::resource('/dashboard/emailsub', DashboardEmailSubmitController::class);
     Route::post('/dashboard/category/addToVerif/{id}', [App\Http\Controllers\DashboardCategoryController::class, 'addToVerif'])->name('category.addToVerif');
     Route::post('/dashboard/category/delToVerif/{id}', [App\Http\Controllers\DashboardCategoryController::class, 'delToVerif'])->name('category.delToVerif');
 

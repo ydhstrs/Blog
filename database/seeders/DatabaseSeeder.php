@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\Contact;
+use App\Models\Ebook;
 use App\Models\LandingPageContent;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -60,6 +62,24 @@ class DatabaseSeeder extends Seeder
             'desc1' => 'desc 1',
             'desc2' => 'desc 2',
             'desc3' => 'desc 3',
+        ]);
+        Contact::create([
+            'email' => 'admin@xplay-w3.com',
+            'tiktok' => 'https://www.tiktok.com/@xplay.w3',
+            'youtube' => 'https://www.youtube.com/@xplay-w3',
+            'linkedin' => '',
+            'instagram' => 'https://www.instagram.com/wildan_alansyar/',
+            'twitter' => '',
+            'discord' => 'https://discord.gg/HcYpsA6x',
+            'telegram' => 'https://t.me/xplayw3',
+        ]);
+        Ebook::create([
+            'title' => 'Your Step-By-Step Plan for Creating an Effective Sales Funnel',
+            'image' => 'Your Step-By-Step Plan for Creating an Effective Sales Funnel',
+            'pdf' => 'Your Step-By-Step Plan for Creating an Effective Sales Funnel',
+            'body' => '· Create your 5-part sales funnel thats proven to grow revenue<br>
+            · Apply the StoryBrand Framework to your marketing <br>
+            · Watch your business grow! ',
         ]);
         Category::create([
             'name' => 'Airdrop Gratis',
