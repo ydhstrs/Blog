@@ -31,6 +31,8 @@ class PostController extends Controller
     {
         $posts = $category->posts()->paginate(9);
 
-        return view('general.postcategory', compact('posts'));
+        $contact = Contact::get()->first();
+
+        return view('general.postcategory', compact('posts', 'contact'));
     }
 }
