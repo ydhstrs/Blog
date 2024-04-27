@@ -81,16 +81,16 @@
                         <ul class="block lg:flex">
                             <li class="group">
                                 <a href="/"
-                                    class="text-base text-black py-2 mx-8 group-hover:text-cyan-900">Home</a>
+                                    class="text-base text-black py-2 lg:mx-8 group-hover:text-cyan-900">Home</a>
                             </li>
                             <li class="group">
                                 <a href="/download-panduan-airdop"
-                                    class="text-base text-black py-2 mx-8 group-hover:text-cyan-900">Download Panduan
+                                    class="text-base text-black py-2 lg:mx-8 group-hover:text-cyan-900">Download Panduan
                                     Airdrop untuk Pemula</a>
                             </li>
                             <li class="group">
                                 <a href="/blog"
-                                    class="text-base text-black py-2 mx-8 group-hover:text-cyan-900">Blog</a>
+                                    class="text-base text-black py-2 lg:mx-8 group-hover:text-cyan-900">Blog</a>
                             </li>
                         </ul>
                     </nav>

@@ -42,7 +42,7 @@
                                 </button>
                             </div>
                             <!-- Body Modal -->
-                            <form class="p-4 md:p-5"  method="post" action="/" >
+                            <form class="p-4 md:p-5" method="post" action="/">
                                 @csrf
                                 <div class="grid gap-4 mb-4">
                                     <div>
@@ -103,7 +103,7 @@
                         </button>
                     </div>
                     <div class="splide__track  mb-10">
-                        <div class="splide__list gap-x-4 mb-10">
+                        <div class="splide__list p-1 mb-10">
                             @foreach ($sectionblog as $item)
                                 {{-- @foreach ($listsections4 as $item) --}}
                                 <div class="leading-1 rounded-xl shadow splide__slide lg:h-500 w-fit mb-10 ">
@@ -111,9 +111,10 @@
                                         class="w-full object-cover h-300 rounded-t-xl">
                                     <div class="p-4">
 
-                                        <p class="text-black text-2xl font-semibold font-montserrat">
+                                        <a href="/article/{{ $item->slug }}"
+                                            class="hover:text-cyan-600 text-black text-2xl font-semibold font-montserrat">
                                             {{ $item->title }}
-                                        </p>
+                                        </a>
                                         <p class="text-gray-700 my-2 text-sm font-medium font-montserrat">
                                             {{ $item->category->name }}
 
@@ -135,44 +136,57 @@
             </div>
         </div>
     </section>
-<section id="sections2" class="my-8 bg-gray-100">
-    <h5 class="text-center text-black font-bold text-2xl py-10 font-montserrat">{{ $section2->title_head }}</h5>
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-0 p-20">
-        <div class="col-span-1 grid grid-cols-4 gap-1 border-2 border-gray-500 p-4 ">
-            <div class="col-span-1 flex justify-center items-center">
-                <svg class="lg:w-[90px] lg:h-[90px] w-14 h-14 place-content-center place-items-center my-auto text-center content-center object-center text-gray-800 bg-amber-400 rounded-full p-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" d="M11 16v-5.5A3.5 3.5 0 0 0 7.5 7m3.5 9H4v-5.5A3.5 3.5 0 0 1 7.5 7m3.5 9v4M7.5 7H14m0 0V4h2.5M14 7v3m-3.5 6H20v-6a3 3 0 0 0-3-3m-2 9v4m-8-6.5h1" />
-                </svg>
+    <section id="sections2" class="my-8 bg-gray-100">
+        <h5 class="text-center text-black font-bold text-2xl py-10 font-montserrat">{{ $section2->title_head }}</h5>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-0 p-20">
+            <div class="col-span-1 grid grid-cols-4 gap-1 border-2 border-gray-500 p-4 ">
+                <div class="col-span-1 flex justify-center items-center">
+                    <svg class="lg:w-[90px] lg:h-[90px] w-14 h-14 place-content-center place-items-center my-auto text-center content-center object-center text-gray-800 bg-amber-400 rounded-full p-2"
+                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                        viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"
+                            d="M11 16v-5.5A3.5 3.5 0 0 0 7.5 7m3.5 9H4v-5.5A3.5 3.5 0 0 1 7.5 7m3.5 9v4M7.5 7H14m0 0V4h2.5M14 7v3m-3.5 6H20v-6a3 3 0 0 0-3-3m-2 9v4m-8-6.5h1" />
+                    </svg>
+                </div>
+                <div class="col-span-3">
+                    <h5 class="text-left text-black font-bold text-xl py-4 font-montserrat">{{ $section2->subtitle1 }}</h5>
+                    <p class="text-left font-light text-black font-montserrat">{{ $section2->desc1 }}</p>
+                </div>
             </div>
-            <div class="col-span-3">
-                <h5 class="text-left text-black font-bold text-xl py-4 font-montserrat">{{ $section2->subtitle1 }}</h5>
-                <p class="text-left font-light text-black font-montserrat">{{ $section2->desc1 }}</p>
+            <div
+                class="col-span-1 grid grid-cols-4 gap-1 lg:border-l-0 border-l-2 lg:border-t-2 lg:border-b-2 border-r-2 border-gray-500 p-4">
+                <div class="col-span-1 flex justify-center items-center">
+                    <svg class="lg:w-[90px] lg:h-[90px] w-14 h-14 text-gray-800  bg-amber-400 rounded-full p-2"
+                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"
+                            d="m11.5 11.5 2.071 1.994M4 10h5m11 0h-1.5M12 7V4M7 7V4m10 3V4m-7 13H8v-2l5.227-5.292a1.46 1.46 0 0 1 2.065 2.065L10 17Zm-5 3h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
+                    </svg>
+                </div>
+                <div class="col-span-3">
+                    <h5 class="text-left text-black font-bold text-xl py-4 font-montserrat">{{ $section2->subtitle2 }}
+                    </h5>
+                    <p class="text-left font-light text-black font-montserrat">{{ $section2->desc2 }}</p>
+                </div>
+            </div>
+            <div
+                class="col-span-1 grid grid-cols-4 lg:gap-1 lg:border-l-0 border-l-2  border-t-2 border-b-2 border-r-2 border-gray-500 p-4 sm:gap-4">
+                <div class="col-span-1 flex justify-center items-center">
+                    <svg class="lg:w-[90px] lg:h-[90px] w-14 h-14 text-gray-800 bg-amber-400 rounded-full p-2"
+                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"
+                            d="M4 4v15a1 1 0 0 0 1 1h15M8 16l2.5-5.5 3 3L17.273 7 20 9.667" />
+                    </svg>
+                </div>
+                <div class="col-span-3">
+                    <h5 class="text-left text-black font-bold md:text-xl sm:text-sm py-4 font-montserrat">
+                        {{ $section2->subtitle3 }}</h5>
+                    <p class="text-left font-light text-black font-montserrat">{{ $section2->desc3 }}</p>
+                </div>
             </div>
         </div>
-        <div class="col-span-1 grid grid-cols-4 gap-1 lg:border-l-0 border-l-2 lg:border-t-2 lg:border-b-2 border-r-2 border-gray-500 p-4">
-            <div class="col-span-1 flex justify-center items-center">
-                <svg class="lg:w-[90px] lg:h-[90px] w-14 h-14 text-gray-800  bg-amber-400 rounded-full p-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" d="m11.5 11.5 2.071 1.994M4 10h5m11 0h-1.5M12 7V4M7 7V4m10 3V4m-7 13H8v-2l5.227-5.292a1.46 1.46 0 0 1 2.065 2.065L10 17Zm-5 3h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
-                </svg>
-            </div>
-            <div class="col-span-3">
-                <h5 class="text-left text-black font-bold text-xl py-4 font-montserrat">{{ $section2->subtitle2 }}</h5>
-                <p class="text-left font-light text-black font-montserrat">{{ $section2->desc2 }}</p>
-            </div>
-        </div>
-        <div class="col-span-1 grid grid-cols-4 lg:gap-1 lg:border-l-0 border-l-2  border-t-2 border-b-2 border-r-2 border-gray-500 p-4 sm:gap-4">
-            <div class="col-span-1 flex justify-center items-center">
-                <svg class="lg:w-[90px] lg:h-[90px] w-14 h-14 text-gray-800 bg-amber-400 rounded-full p-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" d="M4 4v15a1 1 0 0 0 1 1h15M8 16l2.5-5.5 3 3L17.273 7 20 9.667" />
-                </svg>
-            </div>
-            <div class="col-span-3">
-                <h5 class="text-left text-black font-bold md:text-xl sm:text-sm py-4 font-montserrat">{{ $section2->subtitle3 }}</h5>
-                <p class="text-left font-light text-black font-montserrat">{{ $section2->desc3 }}</p>
-            </div>
-        </div>
-    </div>  
-</section>
+    </section>
 
 
     <section id="sections6" class="my-8">
@@ -245,7 +259,7 @@
 
     <section id="footer">
         <div class=" bg-zinc-800">
-            <div class="lg:grid lg:grid-cols-2 lg:gap-24 md:flex md:flex-row md:mx-auto px-1 sm:px-8 lg:gap-x-16 pt-28">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-24 md:flex md:flex-row md:mx-auto px-1 sm:px-8 lg:gap-x-16 gap-y-8 pt-28">
                 <div class="col-span-1 m-auto">
 
                     <div class="container">
@@ -309,16 +323,11 @@
                     </div>
 
                 </div>
-                <div class="col-span-1 m-auto">
-                    <div class="lg:grid lg:grid-cols-2 lg:gap-24 md:flex md:flex-row md:mx-auto px-1 sm:px-8 lg:gap-x-16">
-                        <div class="col-span-1">
-                            <a target="blank"
-                                href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=yudhatriya07@gmail.com"
-                                class="flex items-center gap-2 font-montserrat text-white"><ion-icon class="text-xl"
-                                    name="mail-outline"></ion-icon>{{ $contact->email }}</a>
-                        </div>
+                <div class="col-span-1  ">
+                    <a target="blank" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to={{ $contact->email }}"
+                        class="flex items-center font-montserrat text-white py-4"><ion-icon class="text-xl"
+                            name="mail-outline"></ion-icon>{{ $contact->email }}</a>
 
-                    </div>
                 </div>
 
             </div>

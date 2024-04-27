@@ -12,13 +12,13 @@
                 <h1 class="text-3xl text-center font-montserrat font-bold">{{ $post->title }}</h1>
             </div>
             @if ($post->image)
-                <div class="grid mx-40 my-10 place-items-center h-96 overflow-hidden">
+                <div class="grid lg:mx-40 mx-8 my-10 place-items-center w-fit  overflow-hidden">
                     <img src="{{ asset('/storage/' . $post->image) }}" class="rounded w-screen">
 
                 </div>
             @else
-                <div class="grid mx-40 my-10 place-items-center">
-                    <img src="https://source.unsplash.com/1200x600?nurse" class="rounded">
+                <div class="grid lg:mx-40 mx-8 my-10 place-items-center w-fit ">
+                    <img src="https://source.unsplash.com/1200x600?crypto" class="rounded">
 
                 </div>
             @endif

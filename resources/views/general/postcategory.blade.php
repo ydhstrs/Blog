@@ -111,7 +111,7 @@
                         <div class="col-span-1">
                             <a target="blank"
                                 href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=yudhatriya07@gmail.com"
-                                class="flex items-center gap-2 font-montserrat text-white"><ion-icon class="text-xl"
+                                class="flex items-center font-montserrat text-white py-4"><ion-icon class="text-xl"
                                     name="mail-outline"></ion-icon>{{ $contact->email }}</a>
                         </div>
 
