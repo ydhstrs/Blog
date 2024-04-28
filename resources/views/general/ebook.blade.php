@@ -32,6 +32,9 @@
                         <article class="">
                             {!! $ebook->body !!}
                         </article>
+                        <a href="{{ route('file-download', 1) }}"
+                            class="flex flex-wrap gap-3 bg-red-900 hover:bg-cyan-600 text-white font-bold py-2 px-4 m-8 w-28">
+                            Download</a>
                     </div>
                 </div>
                 <div class="col-span-1">
@@ -44,10 +47,9 @@
 
                 </div>
 
-                <a href="{{ route('file-download', 1) }}"
-                    class="flex flex-wrap gap-3 bg-red-900 hover:bg-cyan-600 text-white font-bold py-2 px-4 m-8 w-28">
-                    Download</a>
+
             </div>
+
         </div>
     </section>
     <section id="footer">
