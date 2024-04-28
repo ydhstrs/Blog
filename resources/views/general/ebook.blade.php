@@ -32,7 +32,7 @@
                         <article class="">
                             {!! $ebook->body !!}
                         </article>
-                        <a href="{{ route('file-download', 1) }}"
+                        <a href="{{ route('file-download', 1) }}" download="{{ route('file-download', 1) }}"
                             class="flex flex-wrap gap-3 bg-red-900 hover:bg-cyan-600 text-white font-bold py-2 px-4 m-8 w-28">
                             Download</a>
                     </div>

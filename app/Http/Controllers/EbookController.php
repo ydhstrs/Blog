@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Contact;
 use App\Models\Ebook;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class EbookController extends Controller
 {
@@ -20,9 +21,10 @@ class EbookController extends Controller
     public function download()
     {
         $file = Ebook::where('id', 1)->first();
-        // ddd($file);
         $pathofFile = asset('/storage/'.$file->pdf);
+        var_dump($pathofFile);
 
-        return response()->download($pathofFile);
+        return Storage::download($pathofFile);
+        // return response()->download($pathofFile);
     }
 }
