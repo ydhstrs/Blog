@@ -22,7 +22,7 @@ class EbookController extends Controller
     {
         $file = Ebook::where('id', 1)->first();
         $pathofFile = asset('/storage/'.$file->pdf);
-        var_dump($pathofFile);
+        // var_dump($pathofFile);
 
         return Storage::download($file->pdf);
         // return response()->download($pathofFile);
