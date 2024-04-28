@@ -24,7 +24,7 @@ class EbookController extends Controller
         $pathofFile = asset('/storage/'.$file->pdf);
         var_dump($pathofFile);
 
-        return Storage::download($pathofFile);
+        return Storage::download($file->pdf);
         // return response()->download($pathofFile);
     }
 }
