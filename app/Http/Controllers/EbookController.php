@@ -15,4 +15,14 @@ class EbookController extends Controller
             'contact' => Contact::get()->first(),
         ]);
     }
+
+    // app/Http/Controllers/PdfController.php
+    public function download()
+    {
+        $file = Ebook::where('id', 1)->first();
+        // ddd($file);
+        $pathofFile = storage_path($file->pdf);
+
+        return response()->download($pathofFile);
+    }
 }

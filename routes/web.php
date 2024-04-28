@@ -26,6 +26,7 @@ Route::get('/download-panduan-airdop', [EbookController::class, 'index'])->name(
 Route::post('/', [LandingPageController::class, 'store'])->name('email');
 Route::get('/article/{post:slug}', [PostController::class, 'show']);
 Route::get('/blog/category/{category}', [PostController::class, 'showCategory']);
+Route::get('/download-panduan-airdop/{id}/download', [EbookController::class, 'download'])->name('file-download');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
