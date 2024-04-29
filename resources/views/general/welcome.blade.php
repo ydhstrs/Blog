@@ -2,7 +2,7 @@
 
 @section('contents')
     <section id="sections1" class="">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-20 bg-transparent">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:p-20 p-4 bg-transparent">
 
             <div class="col-span-1">
 
@@ -14,7 +14,7 @@
 
                 <!-- Modal toggle -->
                 <button data-modal-target="crud-modal" data-modal-toggle="crud-modal"
-                    class="font-montserrat italic block text-xl font-bold text-white bg-gradient-to-r from-amber-400 via-amber-700 to-amber-900 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-2xl px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
+                    class="font-montserrat italic block text-xl font-bold text-white bg-gradient-to-r from-amber-400 via-amber-700 to-amber-900 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-2xl px-5 py-2.5 text-center 
     transform transition-transform duration-300 hover:scale-110"
                     type="button">
                     Cari Tahu Sekarang
@@ -25,11 +25,10 @@
                     class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 flex justify-center items-center h-screen bg-black bg-opacity-50">
                     <div class="relative w-full max-w-md">
                         <!-- Konten Modal -->
-                        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 backdrop-blur-md">
+                        <div class="relative bg-white rounded-lg shadow  backdrop-blur-md">
                             <!-- Header Modal -->
-                            <div
-                                class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white font-montserrat">
+                            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t ">
+                                <h3 class="text-lg font-semibold text-gray-900  font-montserrat">
                                     Masukkan Nama & Email Kamu
                                 </h3>
                                 <button type="button" class="close-button" data-modal-close>
@@ -46,24 +45,22 @@
                                 @csrf
                                 <div class="grid gap-4 mb-4">
                                     <div>
-                                        <label for="name"
-                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama
+                                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 ">Nama
                                             Kamu</label>
                                         <input type="text" name="name" id="name"
-                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                                             placeholder="Masukkan Nama Kamu" required="">
                                     </div>
                                     <div>
-                                        <label for="email"
-                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email
+                                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Email
                                             Kamu</label>
                                         <input type="email" name="email" id="email"
-                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                                             placeholder="nama@contoh.com" required="">
                                     </div>
                                 </div>
                                 <button type="submit"
-                                    class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
                                     Submit
                                 </button>
                             </form>
@@ -74,7 +71,7 @@
 
 
                 <br>
-                <p class ="block mb-2 text-sm font-medium text-gray-900 dark:text-white font-montserrat">
+                <p class ="block mb-2 text-sm font-medium text-gray-900  font-montserrat">
                     {{ $section1->desc }}</p>
             </div>
             <span class="absolute bottom-0 -z-10">
@@ -112,10 +109,10 @@
                                     <div class="p-4">
 
                                         <a href="/article/{{ $item->slug }}"
-                                            class="hover:text-cyan-600 text-black text-2xl font-semibold font-montserrat">
+                                            class="hover:text-cyan-600 text-black lg:text-2xl text-xl font-semibold font-montserrat">
                                             {{ $item->title }}
                                         </a>
-                                        <p class="text-gray-700 my-2 text-sm font-medium font-montserrat">
+                                        <p class="text-gray-700 my-2 lg:text-sm text-xs font-medium font-montserrat">
                                             {{ $item->category->name }}
 
                                         </p>
@@ -138,8 +135,8 @@
     </section>
     <section id="sections2" class="my-8 bg-gray-100">
         <h5 class="text-center text-black font-bold text-2xl py-10 font-montserrat">{{ $section2->title_head }}</h5>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-0 p-20">
-            <div class="col-span-1 grid grid-cols-4 gap-1 border-2 border-gray-500 p-4 ">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:p-20">
+            <div class="col-span-1 grid grid-cols-4 gap-1 border border-gray-500 p-4 ">
                 <div class="col-span-1 flex justify-center items-center">
                     <svg class="lg:w-[90px] lg:h-[90px] w-14 h-14 place-content-center place-items-center my-auto text-center content-center object-center text-gray-800 bg-amber-400 rounded-full p-2"
                         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
@@ -154,7 +151,7 @@
                 </div>
             </div>
             <div
-                class="col-span-1 grid grid-cols-4 gap-1 lg:border-l-0 border-l-2 lg:border-t-2 lg:border-b-2 border-r-2 border-gray-500 p-4">
+                class="col-span-1 grid grid-cols-4 gap-1 lg:border-l-0 border-l lg:border-t lg:border-b border-r border-gray-500 p-4">
                 <div class="col-span-1 flex justify-center items-center">
                     <svg class="lg:w-[90px] lg:h-[90px] w-14 h-14 text-gray-800  bg-amber-400 rounded-full p-2"
                         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -170,7 +167,7 @@
                 </div>
             </div>
             <div
-                class="col-span-1 grid grid-cols-4 lg:gap-1 lg:border-l-0 border-l-2  border-t-2 border-b-2 border-r-2 border-gray-500 p-4 sm:gap-4">
+                class="col-span-1 grid grid-cols-4 lg:gap-1 lg:border-l-0 border-l  border-t border-b border-r border-gray-500 p-4 sm:gap-4">
                 <div class="col-span-1 flex justify-center items-center">
                     <svg class="lg:w-[90px] lg:h-[90px] w-14 h-14 text-gray-800 bg-amber-400 rounded-full p-2"
                         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -195,9 +192,9 @@
             {{ $section3->title_head }}
         </h5>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 lg:p-20">
             <div class="col-span-1">
-                <h5 class="text-center text-black font-bold text-4xl py-4 lg:pt-28">
+                <h5 class="text-left text-black font-bold text-4xl py-4 lg:pt-28">
                     {{ $section3->subtitle1 }}
                 </h5>
                 <p class="text-left font-light text-black">
@@ -205,7 +202,7 @@
                 </p>
             </div>
             <div class="col-span-1">
-                <h5 class="text-center text-black font-bold text-4xl py-4 lg:pt-28">
+                <h5 class="text-left text-black font-bold text-4xl py-4 lg:pt-28">
                     {{ $section3->subtitle2 }}
                 </h5>
                 <p class="text-left font-light text-black"> {{ $section3->desc2 }}
@@ -213,7 +210,7 @@
             </div>
 
             <div class="col-span-1">
-                <h5 class="text-center text-black font-bold text-4xl py-4 lg:pt-28">
+                <h5 class="text-left text-black font-bold text-4xl py-4 lg:pt-28">
                     {{ $section3->subtitle3 }}
                 </h5>
                 <p class="text-left font-light text-black">
@@ -323,7 +320,8 @@
                                 class="w-10 h-10 mr-3 rounded-full flex justify-center items-center border
                  border-white text-white hover:bg-slate-800  hover:text-slate-400">
 
-                                <svg role="img"  width="23"  viewBox="0 0 24 24" class="fill-current" xmlns="http://www.w3.org/2000/svg">
+                                <svg role="img" width="23" viewBox="0 0 24 24" class="fill-current"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <title>Discord</title>
                                     <path
                                         d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" />

@@ -63,8 +63,8 @@
             <div class="flex items-center justify-between relative">
                 <div class="mb-2 sm:mb-0 flex flex-row
   ">
-                    <div class="h-24 self-center mx-4">
-                        <img class="h-24 self-center" src="/logo.png" />
+                    <div class="lg:h-24 h-12 self-center mx-4">
+                        <img class="lg:h-24 h-12 self-center" src="/logo.png" />
                     </div>
                     <div>
                         {{-- <a href="/home" class="text-xl no-underline text-green-900 font-semibold">My Blog</a><br>
@@ -80,21 +80,21 @@
                         <span class="hamburger-line transition duration-500 ease-in-out origin-top-left "></span>
                     </button>
                     <nav id="nav-menu"
-                        class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                        class="hidden absolute bg-white shadow-lg rounded-lg max-w-fit center w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
 
-                        <ul class="block lg:flex">
+                        <ul class="block lg:flex pt-8">
                             <li class="group">
                                 <a href="/"
-                                    class="text-base text-black py-2 lg:mx-8 group-hover:text-cyan-900">Home</a>
+                                    class=" font-montserrat font-bold text-black py-2 lg:mx-8 group-hover:text-cyan-900 p-2">Home</a>
                             </li>
-                            <li class="group">
+                            <li class="group py-2">
                                 <a href="/download-panduan-airdop"
-                                    class="text-base text-black py-2 lg:mx-8 group-hover:text-cyan-900">Download Panduan
+                                    class="font-montserrat font-bold text-black lg:mx-8 group-hover:text-cyan-900 p-2 ">Download Panduan
                                     Airdrop untuk Pemula</a>
                             </li>
                             <li class="group">
                                 <a href="/blog"
-                                    class="text-base text-black py-2 lg:mx-8 group-hover:text-cyan-900">Blog</a>
+                                    class="font-montserrat font-bold text-black py-2 lg:mx-8 group-hover:text-cyan-900 p-2">Blog</a>
                             </li>
                         </ul>
                     </nav>
